@@ -34,6 +34,11 @@ h3 {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -319,6 +324,77 @@ h3 {
         border: none;
         border-radius: 5px;
       }
+    }
+  }
+}
+
+.footer {
+  background: #222222;
+
+  &-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid #d5c9be;
+    border-bottom: 2px solid #d5c9be;
+
+    .nav-wrap {
+      display: flex;
+      gap: 60px;
+      padding: 40px 0;
+
+      &_link {
+        font-family: var(--font-family);
+        font-style: italic;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &-links {
+    &_socials {
+      display: flex;
+      gap: 32px;
+
+      &__link {
+        transition: all 0.2s ease-in;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    &_order-btn {
+      font-family: var(--font-family);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 150%;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-radius: 4px;
+      padding: 32px 52px;
+      border: none;
+    }
+
+    &_date,
+    &_link {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 150%;
+      color: #fff;
+    }
+
+    &_link {
+      color: #d5c9be;
+    }
+
+    .rules {
     }
   }
 }
