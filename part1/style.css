@@ -60,6 +60,7 @@ h3 {
   display: flex;
   width: 100%;
   background-color: #222222;
+  margin-bottom: 100px;
 }
 .hero_text {
   flex-grow: 1;
@@ -119,4 +120,62 @@ h3 {
 .hero_img {
   width: 763px;
   background: url("../assets/img/hero.jpg") center/cover;
+}
+
+.company {
+  display: flex;
+  padding-bottom: 100px;
+}
+.company-left, .company-right {
+  width: 662px;
+  max-width: 662px;
+}
+.company-left {
+  background: url("../assets/img/products1.jpeg") center/cover no-repeat;
+}
+.company-right {
+  background: url("../assets/img/products2.jpeg") center/cover no-repeat;
+}
+.company-content {
+  width: 676px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 53px 53px 0 53px;
+}
+.company-content .company-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.company-content .company-wrap .content {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #55565a;
+}
+.company-content .company-wrap .content_img {
+  width: 58px;
+  height: 58px;
+  background: url("../assets/mark-leaf.svg") center/contain no-repeat;
+}
+.company-content .company-wrap .content_text {
+  width: 544px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  margin: 0;
+}
+.company-content .order-btn {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 32px 0;
+  border-radius: 10px;
+  border: none;
 }/*# sourceMappingURL=style.css.map */
