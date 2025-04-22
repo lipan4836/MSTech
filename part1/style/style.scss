@@ -1,0 +1,134 @@
+:root {
+  --font-family: 'Arial', sans-serif;
+  --second-family: 'Prata', serif;
+}
+
+body {
+  background-color: #282829;
+  color: #fff;
+}
+
+h1 {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 120%;
+  margin: 0 0 50px 0;
+}
+
+h3 {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  .wrap {
+    display: flex;
+    gap: 205px;
+    align-items: center;
+    margin-left: 163px;
+    margin-top: 30px;
+
+    .nav {
+      display: flex;
+      gap: 29px;
+
+      &_link {
+        text-decoration: none;
+        font-family: var(--font-family);
+        font-style: italic;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+  background-color: #222222;
+
+  &_text {
+    flex-grow: 1;
+    margin-top: 332px;
+    padding: 0 162px;
+    padding-bottom: 50px;
+
+    .hero-span {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 120%;
+      margin: 0 0 64px 0;
+    }
+
+    .strengths {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      margin-bottom: 40px;
+
+      &-item {
+        height: 37px;
+        display: flex;
+        gap: 17px;
+        align-items: center;
+
+        &_mark {
+          width: 39px;
+          height: 37px;
+          background: url('../assets/mark.svg');
+        }
+
+        &_content {
+          font-family: var(--font-family);
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 110%;
+
+          &__accent {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 150%;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    .btn {
+      padding: 39.5px 50px;
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 150%;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-radius: 10px;
+      border: none;
+    }
+  }
+
+  &_img {
+    width: 763px;
+    background: url('../assets/img/hero.jpg') center / cover;
+  }
+}
