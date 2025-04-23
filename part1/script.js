@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let isMobileView = window.innerWidth <= 768;
   let lastScroll = 0;
   const header = document.querySelector('.header');
+  let animationId;
 
   const burgerMenu = document.querySelector('.burger-menu');
   const nav = document.querySelector('.nav');
@@ -13,26 +14,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateHeader() {
     if (isMenuOpen) return;
-  
+
     const currentScroll = window.pageYOffset;
-    
+
     const opacity = Math.min(currentScroll / 200, 0.9);
     let translateY = 0;
-    
+
     if (!isMobileView) {
       translateY = -Math.min(currentScroll / 10, 20);
     }
-  
+
     header.style.transform = `translateY(${translateY}px)`;
     header.style.background = `linear-gradient(to bottom, rgba(0, 0, 0, ${opacity}) 0%, rgba(255, 255, 255, 0) 100%)`;
-  
+
     lastScroll = currentScroll;
     requestAnimationFrame(updateHeader);
   }
 
-  window.addEventListener('resize', () => {
+  function handleResize() {
     isMobileView = window.innerWidth <= 768;
-  });
+    cancelAnimationFrame(animationId);
+    updateHeader();
+  }
+
+  window.addEventListener('resize', handleResize);
 
   updateHeader();
 
