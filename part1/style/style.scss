@@ -171,11 +171,11 @@ button {
 
     @media (max-width: 1240px) {
       gap: 100px;
+      margin-left: 100px;
     }
 
     @media (max-width: 1024px) {
       gap: 80px;
-      margin-left: 100px;
 
       h3 {
         font-size: 24px;
@@ -244,6 +244,7 @@ button {
           font-weight: 400;
           font-size: 24px;
           line-height: 110%;
+          margin: 0;
 
           &__accent {
             font-family: var(--second-family);
@@ -268,11 +269,107 @@ button {
       border-radius: 10px;
       border: none;
     }
+
+    @media (max-width: 1240px) {
+      padding: 0 100px 40px;
+      margin-top: 280px;
+
+      h1 {
+        font-size: 50px;
+      }
+
+      .hero-span {
+        font-size: 30px;
+      }
+
+      .strengths {
+        gap: 25px;
+
+        &-item {
+          &_content {
+            font-size: 16px;
+
+            &__accent {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+
+      .btn {
+        font-size: 20px;
+        padding: 30px 40px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      margin-top: 200px;
+    }
   }
 
   &_img {
     width: 763px;
     background: url('../assets/img/hero.jpg') center / cover;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+
+    &_text {
+      margin-top: 50px;
+      padding: 0 60px 40px;
+    }
+
+    &_img {
+      height: 250px;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    &_text {
+      padding: 0 20px 40px;
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .btn {
+        font-size: 18px;
+        padding: 25px 35px;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    &_text {
+      padding: 0 10px 30px;
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .hero-span {
+        font-size: 20px;
+      }
+
+      .strengths {
+        &-item {
+          &_content {
+            font-size: 16px;
+
+            &__accent {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+
+      .btn {
+        width: 100%;
+        padding: 20px;
+      }
+    }
   }
 }
 

@@ -160,12 +160,12 @@ button {
 @media (max-width: 1240px) {
   .header .wrap {
     gap: 100px;
+    margin-left: 100px;
   }
 }
 @media (max-width: 1024px) {
   .header .wrap {
     gap: 80px;
-    margin-left: 100px;
   }
   .header .wrap h3 {
     font-size: 24px;
@@ -232,6 +232,7 @@ button {
   font-weight: 400;
   font-size: 24px;
   line-height: 110%;
+  margin: 0;
 }
 .hero_text .strengths-item_content__accent {
   font-family: var(--second-family);
@@ -252,9 +253,85 @@ button {
   border-radius: 10px;
   border: none;
 }
+@media (max-width: 1240px) {
+  .hero_text {
+    padding: 0 100px 40px;
+    margin-top: 280px;
+  }
+  .hero_text h1 {
+    font-size: 50px;
+  }
+  .hero_text .hero-span {
+    font-size: 30px;
+  }
+  .hero_text .strengths {
+    gap: 25px;
+  }
+  .hero_text .strengths-item_content {
+    font-size: 16px;
+  }
+  .hero_text .strengths-item_content__accent {
+    font-size: 20px;
+  }
+  .hero_text .btn {
+    font-size: 20px;
+    padding: 30px 40px;
+  }
+}
+@media (max-width: 1024px) {
+  .hero_text {
+    margin-top: 200px;
+  }
+}
 .hero_img {
   width: 763px;
   background: url("../assets/img/hero.jpg") center/cover;
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+  }
+  .hero_text {
+    margin-top: 50px;
+    padding: 0 60px 40px;
+  }
+  .hero_img {
+    height: 250px;
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .hero_text {
+    padding: 0 20px 40px;
+  }
+  .hero_text h1 {
+    font-size: 40px;
+  }
+  .hero_text .btn {
+    font-size: 18px;
+    padding: 25px 35px;
+  }
+}
+@media (max-width: 576px) {
+  .hero_text {
+    padding: 0 10px 30px;
+  }
+  .hero_text h1 {
+    font-size: 30px;
+  }
+  .hero_text .hero-span {
+    font-size: 20px;
+  }
+  .hero_text .strengths-item_content {
+    font-size: 16px;
+  }
+  .hero_text .strengths-item_content__accent {
+    font-size: 20px;
+  }
+  .hero_text .btn {
+    width: 100%;
+    padding: 20px;
+  }
 }
 
 .company {
