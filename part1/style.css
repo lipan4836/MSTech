@@ -259,6 +259,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 13px;
+  position: relative;
 }
 .feedback .form-wrap .form_inputs__input {
   font-family: var(--font-family);
@@ -440,4 +441,28 @@ button {
 .footer-links .rules {
   justify-self: end;
   grid-area: rules;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 14px;
+  margin-left: 10px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.form_inputs .error-message {
+  display: block;
+  margin: 5px 0 0 0;
+  position: absolute;
+  top: 150px;
+  left: 0;
+}
+
+.form_inputs__input.error {
+  border-color: #ff6b6b !important;
+}
+
+.form_privacy__checkbox.error + .form_privacy__text {
+  color: #ff6b6b;
 }/*# sourceMappingURL=style.css.map */
