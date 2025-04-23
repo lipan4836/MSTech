@@ -15,4 +15,32 @@ function updateHeader() {
   requestAnimationFrame(updateHeader);
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('feedbackForm');
+  const modal = document.getElementById('succesModal');
+  const modalMsg = document.getElementById('modalMsg');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = form.querySelector('[name="name"]').value;
+    const email = form.querySelector('[name="email"]').value;
+    const isPrivacyAccepted = form.querySelector('[name="privacy"]').checked;
+
+    if (!isPrivacyAccepted) {
+      alert('Please accept the Privacy policy');
+      return;
+    }
+
+    modalMsg.textContent = `Thank you, ${name}. We will contact you at ${email} as soon as possible.`;
+    modal.classList.add('active');
+
+    setTimeout(() => {
+      modal.classList.remove('active');
+    }, 3000);
+
+    form.reset();
+  });
+});
+
 updateHeader();

@@ -93,7 +93,7 @@
     </section>
     <section class="feedback">
       <div class="form-wrap">
-        <form action="" class="form">
+        <form action="" class="form" id="feedbackForm">
           <h2>Need more information? Contact us.</h2>
           <div class="form_inputs">
             <input
@@ -110,11 +110,20 @@
             />
           </div>
           <div class="form_privacy">
-            <input type="checkbox" class="form_privacy__checkbox" />
+            <input
+              type="checkbox"
+              class="form_privacy__checkbox"
+              name="privacy"
+            />
             <span class="form_privacy__text">I accept Privacy policy</span>
           </div>
           <button class="form_submit" type="submit">contact us</button>
         </form>
+      </div>
+      <div class="modal" id="succesModal">
+        <div class="modal_content">
+          <p id="modalMsg"></p>
+        </div>
       </div>
     </section>
     <footer class="footer">

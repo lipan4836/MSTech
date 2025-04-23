@@ -333,6 +333,29 @@ button {
 .feedback .form-wrap .form_submit:hover {
   background: #424250;
 }
+.feedback .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: #282829;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.feedback .modal_content {
+  text-align: center;
+  font-size: 18px;
+}
+.feedback .modal.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
 
 .footer {
   background: #222222;
