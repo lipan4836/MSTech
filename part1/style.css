@@ -37,6 +37,42 @@ h3 {
 a {
   text-decoration: none;
   color: #fff;
+  position: relative;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.btn-white:hover {
+  background: #ebd396;
+  color: #fff;
+}
+
+.text-link::after {
+  content: "";
+  position: absolute;
+  bottom: -0.4em;
+  left: 50%;
+  right: 50%;
+  height: 1px;
+  background: currentColor;
+  transition: all ease 0.2s;
+}
+.text-link:hover::after {
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+.text-link::before {
+  position: absolute;
+  transform: translateX(-100%);
+  left: -10px;
+  color: #eee;
+  opacity: 0.3;
+  font-weight: 100;
+  font-size: 0.8em;
 }
 
 .header {
@@ -44,7 +80,10 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 1000;
+  background: transparent;
+  transition: background 0.5s ease, transform 0.3s ease;
+  transform: translateY(0);
 }
 .header .wrap {
   display: flex;
@@ -291,6 +330,9 @@ a {
   border: none;
   border-radius: 5px;
 }
+.feedback .form-wrap .form_submit:hover {
+  background: #424250;
+}
 
 .footer {
   background: #222222;
@@ -338,7 +380,7 @@ a {
   transition: all 0.2s ease-in;
 }
 .footer-links_socials__link:hover {
-  transform: scale(1.2);
+  transform: scale(1.2) rotate(13deg);
 }
 .footer-links_order-btn {
   grid-area: order;
