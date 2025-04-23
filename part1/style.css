@@ -3,6 +3,10 @@
   --second-family: "Prata", serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #282829;
   color: #fff;
@@ -683,6 +687,24 @@ button {
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
+@media (max-width: 768px) {
+  .footer-nav .nav-wrap {
+    padding: 20px 0;
+  }
+  .footer-nav .nav-wrap_link {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .footer-nav .nav-wrap {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  .footer-nav .nav-wrap_link {
+    font-size: 14px;
+  }
+}
 .footer-links {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -690,7 +712,7 @@ button {
   align-items: center;
   gap: 38px 0.5em;
   grid-template-areas: "h3 socials order" "date privacy rules";
-  padding: 43px 183px;
+  padding: 43px 163px;
 }
 .footer-links h3 {
   grid-area: h3;
@@ -742,6 +764,53 @@ button {
 .footer-links .rules {
   justify-self: end;
   grid-area: rules;
+}
+@media (max-width: 1240px) {
+  .footer-links {
+    padding: 43px 100px;
+  }
+}
+@media (max-width: 1024px) {
+  .footer-links h3 {
+    font-size: 24px;
+  }
+  .footer-links_socials {
+    gap: 8px;
+  }
+  .footer-links_order-btn {
+    padding: 20px;
+  }
+}
+@media (max-width: 860px) {
+  .footer-links h3 {
+    font-size: 18px;
+  }
+  .footer-links_socials {
+    gap: 4px;
+  }
+  .footer-links_order-btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .footer-links {
+    padding: 30px 60px;
+  }
+  .footer-links_date, .footer-links_link {
+    font-size: 12px;
+  }
+}
+@media (max-width: 650px) {
+  .footer-links {
+    padding: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .error-message {
