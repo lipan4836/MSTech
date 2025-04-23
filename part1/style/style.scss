@@ -706,6 +706,7 @@ button {
         &_inputs {
           &__input {
             font-size: 14px;
+            padding: 10px 20px;
           }
         }
       }
@@ -859,6 +860,11 @@ button {
   margin-left: 10px;
   display: inline-block;
   white-space: nowrap;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 25px;
+  }
 }
 
 .form_inputs .error-message {
@@ -867,6 +873,18 @@ button {
   position: absolute;
   top: 150px;
   left: 0;
+
+  @media (max-width: 1240px) {
+    top: 140px;
+  }
+
+  @media (max-width: 768px) {
+    top: 127px;
+  }
+
+  @media (max-width: 576px) {
+    top: 102px;
+  }
 }
 
 .form_inputs__input.error {

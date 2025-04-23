@@ -620,6 +620,7 @@ button {
   }
   .feedback .form-wrap .form_inputs__input {
     font-size: 14px;
+    padding: 10px 20px;
   }
 }
 @media (max-width: 375px) {
@@ -750,6 +751,12 @@ button {
   display: inline-block;
   white-space: nowrap;
 }
+@media (max-width: 768px) {
+  .error-message {
+    position: absolute;
+    top: 25px;
+  }
+}
 
 .form_inputs .error-message {
   display: block;
@@ -757,6 +764,21 @@ button {
   position: absolute;
   top: 150px;
   left: 0;
+}
+@media (max-width: 1240px) {
+  .form_inputs .error-message {
+    top: 140px;
+  }
+}
+@media (max-width: 768px) {
+  .form_inputs .error-message {
+    top: 127px;
+  }
+}
+@media (max-width: 576px) {
+  .form_inputs .error-message {
+    top: 102px;
+  }
 }
 
 .form_inputs__input.error {
