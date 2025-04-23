@@ -356,9 +356,25 @@ a {
   }
 
   &-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 22px;
+    align-items: center;
+    gap: 38px 0.5em;
+    grid-template-areas:
+      'h3 socials order'
+      'date privacy rules';
+    padding: 43px 183px;
+
+    h3 {
+      grid-area: h3;
+    }
+
     &_socials {
       display: flex;
       gap: 32px;
+      grid-area: socials;
+      justify-self: center;
 
       &__link {
         transition: all 0.2s ease-in;
@@ -369,6 +385,8 @@ a {
     }
 
     &_order-btn {
+      grid-area: order;
+      justify-self: end;
       font-family: var(--font-family);
       font-style: italic;
       font-weight: 400;
@@ -383,6 +401,7 @@ a {
 
     &_date,
     &_link {
+      height: 21px;
       font-family: var(--font-family);
       font-weight: 400;
       font-size: 20px;
@@ -390,11 +409,22 @@ a {
       color: #fff;
     }
 
+    &_date {
+      grid-area: date;
+    }
+
     &_link {
       color: #d5c9be;
     }
 
+    .privacy {
+      grid-area: privacy;
+      justify-self: center;
+    }
+
     .rules {
+      justify-self: end;
+      grid-area: rules;
     }
   }
 }
