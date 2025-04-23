@@ -2,11 +2,17 @@ document.addEventListener('DOMContentLoaded', () => {
   let lastScroll = 0;
   const header = document.querySelector('.header');
 
+  const burgerMenu = document.querySelector('.burger-menu');
+  const nav = document.querySelector('.nav');
+  let isMenuOpen = false;
+
   const form = document.getElementById('feedbackForm');
   const modal = document.getElementById('succesModal');
   const modalMsg = document.getElementById('modalMsg');
 
   function updateHeader() {
+    if (isMenuOpen) return;
+
     const currentScroll = window.pageYOffset;
     const scrollDiff = currentScroll - lastScroll;
 
@@ -63,6 +69,31 @@ document.addEventListener('DOMContentLoaded', () => {
     if (error) error.remove();
     input.classList.remove('error');
   }
+
+  burgerMenu.addEventListener('click', () => {
+    isMenuOpen = !isMenuOpen;
+
+    if (isMenuOpen) {
+      burgerMenu.classList.add('active');
+      nav.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    } else {
+      burgerMenu.classList.remove('active');
+      nav.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+
+  document.querySelectorAll('.nav_link').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (isMenuOpen) {
+        burgerMenu.classList.remove('active');
+        nav.classList.remove('active');
+        document.body.style.overflow = '';
+        isMenuOpen = false;
+      }
+    });
+  });
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
